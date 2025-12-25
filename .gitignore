@@ -1,0 +1,4 @@
+/vendor/
+upload/
+testmail.php
+composer.lock

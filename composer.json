@@ -1,0 +1,15 @@
+{
+    "name": "tisha/ims",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tisha Patel",
+            "email": "tishapatel249@gmail.com"
+        }
+    ],
+    "require": {}
+}

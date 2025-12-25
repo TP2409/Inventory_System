@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+h1,h2 {
+    text-align: center;
+}
+
+/*Button*/
+.btn{
+    font-weight: bold;
+     background: #845cc5;
+     color: white;
+}
+
+
+/* Forms */
+form {
+    max-width: 500px;
+    background: #eeecf3;
+    padding: 20px;
+    margin: auto;
+    border: black;
+    border-width: 5px;
+    border-radius: 10px;
+
+}
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+form button {
+    padding: 10px 16px;
+    background: #845cc5;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #6f47a3;
+}
+        
+.login-container {
+    background: #d7d1da ;
+    padding: 40px 30px;
+    border-radius: 15px;
+    border: #ffffff 4px solid ;
+    width: 500px;
+    height: auto;
+}
+.sign-in {
+    position: relative;
+    z-index: 2;
+    background: #845cc5;
+    border-radius: 10px;
+    color: #ffffff;
+    width: 10%;
+    top: 20px;
+    height: 40px;
+    text-align: center;
+    align-content: center;
+    margin: auto;
+    
+}
+  
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+input {
+    width: 100%;
+    padding: 12px 40px 12px 40px;
+    font-size: 22px;
+    transition: 0.3s;
+    }
+input[type=email],input[type=password],input[type=text] {
+    border-radius: 4px;
+    border:rgb(80, 70, 127) 2px solid ;
+    color:rgb(80, 70, 127);
+}
+input[type=email]:hover,input[type=password]:hover,input[type=text]:hover {
+    border-radius: 4px;
+    border:rgb(80, 70, 127) 2px solid ;
+    color:rgb(80, 70, 127);
+}
+p{
+    color: rgb(80, 70, 127);
+    padding-top:5px;
+}
