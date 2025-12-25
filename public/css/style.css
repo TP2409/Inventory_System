@@ -171,3 +171,28 @@ p {
     color: red !important;
     font-size: 14px;
 }
+
+/*Cards*/
+
+.grid {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(3, minmax(30px,1fr));
+    gap:40px;
+    
+  }
+
+.card-btn {
+    background: #eee5fc;
+    color: black;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    max-width: 500px;
+    min-height: 100px;
+    align-content: center;
+    text-decoration: none;
+    font-size: 24px;
+  }

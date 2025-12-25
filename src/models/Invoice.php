@@ -76,5 +76,10 @@ class Invoice
         return $invoice;
     }
 
+    public function getTotalInvoices(){
+        $stmt=$this->db->query("SELECT COUNT(*) AS total FROM invoices");
+        return $stmt->fetch()['total'];
+    }
+
 
 }

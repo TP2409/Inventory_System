@@ -7,11 +7,15 @@
         <link rel="stylesheet"  href="./css/style.css">
     </head>
 
-<body>   
-<h2>Products List</h2><br>
-<div>
-   <h4>Total Products: <?= $totalProducts ?></h4>
-</div>
+<body>
+<div class="grid">
+    <a class="card-btn" href="index.php?action=products-list"><h4>Total Products: <?= $totalProducts ?></h4></a>
+    <a class="card-btn" href="index.php?action=invoices-list"><h4>Total Invoices: <?= $totalInvoices ?></h4></a>
+    <a class="card-btn" href="index.php?action=low-stock-list"><h4>Low Stock Products: <?= $lowStockProducts ?></h4></a>
+</div> <br>  
+
+<h2>Products List</h2>
+
 <div class="right-bar">
     <a href="index.php?action=product-add" class="btn">Add New Product</a>
     <a href="index.php?action=invoice-create" class="btn">Create Invoice</a>
@@ -53,25 +57,7 @@
             <?php endforeach ?>   
         </tbody>
     </table><br>
-    <h4>Low Stock Products</h4>
-    <?php if (!empty($lowStockProducts)): ?>
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Category</th>
-                <th>Quantity</th>
-            </tr>
-            <?php foreach ($lowStockProducts as $item): ?>
-                <tr>
-                    <td><?= htmlspecialchars($item['name']) ?></td>
-                    <td><?= htmlspecialchars($item['category']) ?></td>
-                    <td><?= $item['quantity'] ?></td>
-                </tr>
-            <?php endforeach; ?>
-        </table>
-    <?php else: ?>
-        <p>No low stock products</p>
-    <?php endif; ?>
+    
 </body> 
 </html>
 <?php include __DIR__ . "/../layouts/footer.php"; ?>

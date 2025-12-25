@@ -24,8 +24,21 @@ class InvoiceController extends Controller
     {
         if (!isset($_SESSION['admin_id'])) { header("Location: index.php?action=invoices-list"); exit; }
 
-        $invoices = (new Invoice())->getAll();
-        $this->view("/invoice/invoices-list", ["invoices"=>$invoices]);
+        $productModel = new Product();
+        $invoiceModel = new Invoice();
+        $products = $productModel->getAll();
+        $invoices =$invoiceModel->getAll();
+        $totalProducts = $productModel->getTotalCount();
+        $lowStockProducts = $productModel->getLowStockCount(5);
+        $totalInvoices = $invoiceModel->getTotalInvoices();
+
+        $this->view("/invoice/invoices-list", [
+            "products"=>$products,
+            "invoices"=>$invoices,
+            "totalProducts" => $totalProducts,
+            "lowStockProducts" => $lowStockProducts,
+            "totalInvoices" => $totalInvoices
+        ]); 
     }
 
 

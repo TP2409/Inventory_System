@@ -60,7 +60,11 @@ switch ($action) {
 
     case "product-restock":
         (new ProductsController())->updateStock();
-        break;    
+        break;  
+
+    case  "low-stock-list": 
+        (new ProductsController())->lowStockList();
+        break;
 
     case "invoices-list":
         (new InvoiceController())->index();

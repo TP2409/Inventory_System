@@ -95,8 +95,14 @@ class Product
         return $stmt->fetch()['total'];
     }
 
-    public function getLowStocks($limit=5){
-        $stmt=$this->db->prepare("SELECT * FROM products WHERE quantity <= :qty");
+    public function getLowStockCount($limit=5){
+        $stmt=$this->db->prepare("SELECT COUNT(*) AS total FROM products WHERE quantity < :qty");
+        $stmt->execute(['qty'=> $limit]);
+        return $stmt->fetch()['total'];
+    }
+
+     public function getLowStocks($limit=5){
+        $stmt=$this->db->prepare("SELECT * FROM products WHERE quantity < :qty");
         $stmt->execute(['qty'=> $limit]);
         return $stmt->fetchAll();
     }

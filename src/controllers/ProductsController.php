@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 use App\Controller;
 use App\Models\Product;
+use App\Models\Invoice;
 
 class ProductsController extends Controller
 {
@@ -18,15 +19,18 @@ class ProductsController extends Controller
     {
         if (!isset($_SESSION['admin_id'])) { header("Location: index.php?action=admin-login"); exit; }
 
-        $model = new Product();
-        $products = $model->getAll();
-        $totalProducts = $model->getTotalCount();
-        $lowStockProducts = $model->getLowStocks(5);
+        $productModel = new Product();
+        $invoiceModel = new Invoice();
+        $products = $productModel->getAll();
+        $totalProducts = $productModel->getTotalCount();
+        $lowStockProducts = $productModel->getLowStockCount(5);
+        $totalInvoices = $invoiceModel->getTotalInvoices();
 
         $this->view("/product/products-list", [
             "products"=>$products,
             "totalProducts" => $totalProducts,
-            "lowStockProducts" => $lowStockProducts
+            "lowStockProducts" => $lowStockProducts,
+            "totalInvoices" => $totalInvoices
         ]);    
     
     }
@@ -196,6 +200,28 @@ class ProductsController extends Controller
         }
             
 
+    }
+
+    public function lowStockList()
+    {
+        if (!isset($_SESSION['admin_id'])) { header("Location: index.php?action=low-stock-list"); exit; }
+
+        $productModel = new Product();
+        $invoiceModel = new Invoice();
+        $products = $productModel->getAll();
+        $lowStockList =$productModel->getLowStocks();
+        $totalProducts = $productModel->getTotalCount();
+        $lowStockProducts = $productModel->getLowStockCount(5);
+        $totalInvoices = $invoiceModel->getTotalInvoices();
+
+        $this->view("/product/low-stock-list", [
+            "products"=>$products,
+            "lowStockList"=>$lowStockList,
+            "totalProducts" => $totalProducts,
+            "lowStockProducts" => $lowStockProducts,
+            "totalInvoices" => $totalInvoices
+        ]);    
+    
     }
 
     
