@@ -15,6 +15,10 @@
 
 <h2>Generated Invoices</h2>
 
+<div class="right-bar">
+    <a href="index.php?action=invoice-create" class="btn">Create Invoice</a>
+</div>
+
 <table width="100%">
 <tr>
     <th>Invoice No</th>
