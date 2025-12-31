@@ -25,7 +25,7 @@ h1,h2 {
 }
 /* Sidebar */
 .sidebar {
-    width: 230px;
+    width: 200px;
     background: #845cc5;
     padding: 20px;
     color: #fff;
@@ -48,9 +48,14 @@ h1,h2 {
     border-radius: 6px;
     color: #fff;
 }
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
 .main-content{
-    width:87%;
+    width:89%;
     float: right;
     align-self: center;
 }
@@ -74,7 +79,7 @@ h1,h2 {
 
 /* Table */
 table {
-    width: 97%;
+    width: 98%;
     background: #fff;
     border-radius: 8px;
     overflow: hidden;

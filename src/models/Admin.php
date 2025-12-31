@@ -3,6 +3,7 @@ namespace App\Models;
 
 use App\Database;
 use PDO;
+use RobThree\TwoFactorAuth\lib\TwoFactorAuth;
 
 class Admin
 {
@@ -18,15 +19,12 @@ class Admin
         $stmt = $this->db->query("SELECT * FROM users");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-
      public function findByEmail($email)
     {
         $stmt = $this->db->prepare("SELECT * FROM users WHERE email = :email");
         $stmt->execute([':email' => $email]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-
-    
     public function insert($data)
     {
         
@@ -66,5 +64,49 @@ class Admin
         echo "<script> setTimeout(function() { window.location.href = 'index.php?success=created'; }, 2000); </script>";
         exit;  
 
+    }
+
+    public function find($id)
+    {
+        $stmt = $this->db->prepare("SELECT * FROM users WHERE id = :id");
+        $stmt->execute([':id' => $id]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function update($id, $data)
+    {
+        $stmt = $this->db->prepare("
+            UPDATE users 
+            SET google2fa_secret = :secret 
+            WHERE id = :id
+        ");
+
+        return $stmt->execute([
+            ':secret' => $data['google2fa_secret'],
+            ':id' => $id
+        ]);
+    }
+
+    public function enable2fa($id, $secret)
+    {
+        $stmt = $this->db->prepare("
+            UPDATE users 
+            SET google2fa_secret = :secret, google2fa_enabled = 1 
+            WHERE id = :id
+        ");
+        return $stmt->execute([
+            ':secret' => $secret,
+            ':id' => $id
+        ]);
+    }
+
+    public function disable2fa($id)
+    {
+        $stmt = $this->db->prepare("
+            UPDATE users 
+            SET google2fa_secret = NULL, google2fa_enabled = 0 
+            WHERE id = :id
+        ");
+        return $stmt->execute([':id' => $id]);
     }
 }

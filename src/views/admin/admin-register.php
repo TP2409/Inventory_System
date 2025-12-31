@@ -9,6 +9,8 @@
     <div >
         <h3 class="sign-in">Register</h3>
         <form id="registerForm" method="POST" action="index.php?action=admin-store">
+            <br>
+
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Name" required><br>
 

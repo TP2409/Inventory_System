@@ -11,7 +11,7 @@
     <a class="card-btn" href="index.php?action=products-list"><h4>Total Products: <?= $totalProducts ?></h4></a>
     <a class="card-btn" href="index.php?action=invoices-list"><h4>Total Invoices: <?= $totalInvoices ?></h4></a>
     <a class="card-btn" href="index.php?action=low-stock-list"><h4>Low Stock Products: <?= $lowStockProducts ?></h4></a>
-</div> <br>
+</div>
 
 <h2>Generated Invoices</h2>
 

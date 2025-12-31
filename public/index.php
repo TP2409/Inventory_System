@@ -29,7 +29,31 @@ switch ($action) {
     case "admin-logout":
         (new AdminController())->logout();
         break;
-        
+
+    case 'verify-2fa':
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            (new AdminController())->verify2fa();
+        } else {
+            (new AdminController())->showVerify2fa();
+        }
+        break;
+
+    case 'setup-2fa':
+        (new AdminController())->setup2fa();
+        break;
+
+    case "confirm-2fa":
+        (new AdminController())->confirm2fa();
+        break;
+
+    case "disable-2fa":
+        (new AdminController())->disable2fa();
+        break;  
+          
+    case "cancel-setup-2fa":
+        (new AdminController())->cancelSetup2fa();
+        break;
+
     case "products-list":
         (new ProductsController())->index();
         break;

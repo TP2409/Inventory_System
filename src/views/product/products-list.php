@@ -12,7 +12,7 @@
     <a class="card-btn" href="index.php?action=products-list"><h4>Total Products: <?= $totalProducts ?></h4></a>
     <a class="card-btn" href="index.php?action=invoices-list"><h4>Total Invoices: <?= $totalInvoices ?></h4></a>
     <a class="card-btn" href="index.php?action=low-stock-list"><h4>Low Stock Products: <?= $lowStockProducts ?></h4></a>
-</div> <br>  
+</div> 
 
 <h2>Products List</h2>
 
@@ -20,6 +20,7 @@
     <a href="index.php?action=product-add" class="btn">Add New Product</a>
     <a href="index.php?action=invoice-create" class="btn">Create Invoice</a>
     <a href="index.php?action=admin-logout"class="btn" onclick="return confirm('Are you sure you want to logout?')">Logout</a>
+    <a href="index.php?action=disable-2fa" class="btn">Disable 2FA</a>
 </div>
     <table>
         <thead> 
