@@ -72,32 +72,15 @@ class Admin
         $stmt->execute([':id' => $id]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-
-    public function update($id, $data)
+    public function enable2fa($adminId, $secret)
     {
-        $stmt = $this->db->prepare("
-            UPDATE users 
-            SET google2fa_secret = :secret 
-            WHERE id = :id
-        ");
+        $sql = "UPDATE users 
+                SET google2fa_secret = ?, 
+                    google2fa_enabled = 1 
+                WHERE id = ?";
 
-        return $stmt->execute([
-            ':secret' => $data['google2fa_secret'],
-            ':id' => $id
-        ]);
-    }
-
-    public function enable2fa($id, $secret)
-    {
-        $stmt = $this->db->prepare("
-            UPDATE users 
-            SET google2fa_secret = :secret, google2fa_enabled = 1 
-            WHERE id = :id
-        ");
-        return $stmt->execute([
-            ':secret' => $secret,
-            ':id' => $id
-        ]);
+        $stmt = $this->db->prepare($sql);
+        return $stmt->execute([$secret, $adminId]);
     }
 
     public function disable2fa($id)

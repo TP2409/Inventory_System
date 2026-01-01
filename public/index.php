@@ -21,6 +21,10 @@ switch ($action) {
     case "admin-store":
         (new AdminController())->store();
         break;
+        
+    case "admin-profile":
+        (new AdminController())->profile();
+        break;
 
     case "admin-login-check":
         (new AdminController())->loginCheck();
@@ -30,26 +34,32 @@ switch ($action) {
         (new AdminController())->logout();
         break;
 
-    case 'verify-2fa':
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            (new AdminController())->verify2fa();
-        } else {
-            (new AdminController())->showVerify2fa();
-        }
+    case 'install-2fa':
+        (new AdminController())->install2fa();
         break;
-
+    
     case 'setup-2fa':
         (new AdminController())->setup2fa();
         break;
 
     case "confirm-2fa":
-        (new AdminController())->confirm2fa();
+        $_SERVER['REQUEST_METHOD'] === 'POST' 
+        ? (new AdminController())->confirm2fa()
+        : (new AdminController())->showConfirm2fa();
         break;
 
     case "disable-2fa":
         (new AdminController())->disable2fa();
         break;  
-          
+    
+    case 'verify-2fa':
+        (new AdminController())->showVerify2fa();
+        break;
+
+    case 'verify-2fa-check':
+         (new AdminController())->verify2fa();
+        break;
+
     case "cancel-setup-2fa":
         (new AdminController())->cancelSetup2fa();
         break;

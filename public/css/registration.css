@@ -12,13 +12,17 @@ h1,h2 {
 .btn{
     font-weight: bold;
     background: #845cc5;
-    color: white;
     text-decoration: none;
     padding: 10px 16px;
     border: none;
     color: white;
     border-radius: 8px;
     cursor: pointer;
+}
+.btn-group {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
 }
 
 

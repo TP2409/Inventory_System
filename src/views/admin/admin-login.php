@@ -18,10 +18,6 @@
         <label for="password">Password:</label>
         <input type="password" name="password" id="password" placeholder="Password">
 
-        <label>
-            <input type="checkbox" name="enable_2fa" value="1"> Enable Two-Factor Authentication
-        </label>
-
         <button type="submit" class="btn">Login</button>
         <button type="button" class="btn" onclick="window.location.href='index.php?action=admin-register'">
             Register
