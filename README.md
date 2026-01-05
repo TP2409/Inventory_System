@@ -180,7 +180,7 @@ This project focuses on inventory tracking, low-stock monitoring, and basic invo
 
 ### **Login and Registration **
 <p align="center">
-<img width="1920" height="346" alt="Login" src="https://github.com/user-attachments/assets/9688c885-e28e-4c9f-8417-cee57e7299ca" />
+  <img width="1920" height="398" alt="Login" src="https://github.com/user-attachments/assets/50d0d311-0ccc-4e5c-9e32-d797294ecb1c" />
 <strong>Figure 16: Login </strong>
 </p>
 <p align="center">
@@ -195,8 +195,30 @@ This project focuses on inventory tracking, low-stock monitoring, and basic invo
 ### **Admin Profile**
 <p align="center">
   <img width="1920" height="954" alt="Admin Profile" src="https://github.com/user-attachments/assets/1b44ef68-3fc4-43cb-8711-b297e3b070ce" />
-  <strong>Figure 19: Admin Profile </strong>>
+  <strong>Figure 19: Admin Profile </strong>
 </p>
-
-
-
+<p align="center">
+  <img width="1920" height="398" alt="Install Authenticator" src="https://github.com/user-attachments/assets/797d1dd6-d19f-46e5-92f9-8e1a997d3adc" />
+  <strong>Figure 20: Install 2FA </strong>
+</p>
+<p align="center">
+  <img width="1920" height="578" alt="Scan QR" src="https://github.com/user-attachments/assets/88c66d36-b5b6-4f86-af91-c211c7bb381e" />
+  <strong>Figure 21: Scan QR Code</strong>
+</p>
+<p align="center">
+  <img width="1920" height="386" alt="Verify and Enable" src="https://github.com/user-attachments/assets/dc5f53d0-72cb-482e-87f0-2c1a319c1f8d" />
+  <strong>Figure 22: Verify and Enable 2FA</strong>
+</p>
+<p>
+  <strong>Figure 23: Enable 2FA Mail</strong>
+</p>
+<p>
+  <strong>Figure 24: Enable 2FA in Admin Profile</strong>
+</p>
+<p align="center">
+  <img width="1920" height="371" alt="Login after Enable 2FA" src="https://github.com/user-attachments/assets/ab628fc7-8a43-466b-b137-965295f8e846" />
+  <strong>Figure 25: After 2FA Enable Login</strong>
+</p>
+<p>
+  <strong>Figure 26: Reset QR Scan for lost or reset</strong>
+</p>
