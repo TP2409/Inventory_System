@@ -28,7 +28,8 @@ This project focuses on inventory tracking, low-stock monitoring, and basic invo
 - Frontend: HTML, CSS, JavaScript  
 - Backend: PHP  
 - Database: MySQL  
-- Server: WAMP Server  
+- Server: WAMP Server
+- 2FA Google Authentication 
 - Architecture: MVC (Model–View–Controller)
 
 
@@ -69,6 +70,8 @@ This project focuses on inventory tracking, low-stock monitoring, and basic invo
 ### **Admin Module**
 - Admin login
 - Admin logout
+- Admin Profile details
+- Enable and Disable the 2fa authentication
 - Session-based authentication
 
 ### **Product Module**
@@ -91,6 +94,7 @@ This project focuses on inventory tracking, low-stock monitoring, and basic invo
 - Track total number of invoices
 
 ### **Dashboard Module**
+- Admin Profile
 - Products List
 - Invoice List
 - Low Stock List
@@ -174,7 +178,7 @@ This project focuses on inventory tracking, low-stock monitoring, and basic invo
 <strong>Figure 15: Restock Mail when quantity is zero. </strong>
 </p>
 
-### **Login and Reistration **
+### **Login and Registration **
 <p align="center">
 <img width="1920" height="346" alt="Login" src="https://github.com/user-attachments/assets/9688c885-e28e-4c9f-8417-cee57e7299ca" />
 <strong>Figure 16: Login </strong>
@@ -188,9 +192,11 @@ This project focuses on inventory tracking, low-stock monitoring, and basic invo
 <strong>Figure 18: Registration Successful mail with username and password </strong> 
 </p>
 
-
-
-
+### **Admin Profile**
+<p align="center">
+  <img width="1920" height="954" alt="Admin Profile" src="https://github.com/user-attachments/assets/1b44ef68-3fc4-43cb-8711-b297e3b070ce" />
+  <strong>Figure 19: Admin Profile </strong>>
+</p>
 
 
 
