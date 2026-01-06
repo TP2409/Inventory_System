@@ -209,16 +209,23 @@ This project focuses on inventory tracking, low-stock monitoring, and basic invo
   <img width="1920" height="386" alt="Verify and Enable" src="https://github.com/user-attachments/assets/dc5f53d0-72cb-482e-87f0-2c1a319c1f8d" />
   <strong>Figure 22: Verify and Enable 2FA</strong>
 </p>
-<p>
+<p align="center">
+  <img width="1920" height="1080" alt="2FA Enable Mail" src="https://github.com/user-attachments/assets/bf5b08ec-8385-4c54-b8c4-b8cbb2cdf383" />
   <strong>Figure 23: Enable 2FA Mail</strong>
 </p>
-<p>
+<p align="center">
+  <img width="1920" height="1080" alt="Status Enable" src="https://github.com/user-attachments/assets/96781563-fe4b-4bfc-be1e-904673139fb5" />
   <strong>Figure 24: Enable 2FA in Admin Profile</strong>
+</p>
+<p>
+  <img width="1920" height="1080" alt="Disable 2FA" src="https://github.com/user-attachments/assets/39ef8162-f376-40cf-9a91-fe572d36f0d0" />
+  <strong>Figure 25: Diable from Admin Profile</strong>
 </p>
 <p align="center">
   <img width="1920" height="371" alt="Login after Enable 2FA" src="https://github.com/user-attachments/assets/ab628fc7-8a43-466b-b137-965295f8e846" />
-  <strong>Figure 25: After 2FA Enable Login</strong>
+  <strong>Figure 26: After 2FA Enable Login</strong>
 </p>
-<p>
-  <strong>Figure 26: Reset QR Scan for lost or reset</strong>
+<p align="center">
+  <img width="1920" height="617" alt="Reset QR" src="https://github.com/user-attachments/assets/1a741822-08fd-4b0b-b1bc-5102f8a8f64b" />
+  <strong>Figure 27: Reset QR Scan for lost or reset</strong>
 </p>
