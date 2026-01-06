@@ -210,15 +210,15 @@ This project focuses on inventory tracking, low-stock monitoring, and basic invo
   <strong>Figure 22: Verify and Enable 2FA</strong>
 </p>
 <p align="center">
-  <img width="1920" height="1080" alt="2FA Enable Mail" src="https://github.com/user-attachments/assets/bf5b08ec-8385-4c54-b8c4-b8cbb2cdf383" />
+  <img width="1920" height="944" alt="2FA Enable Mail" src="https://github.com/user-attachments/assets/3364926a-64b0-4e27-9225-9b2cb8895374" />
   <strong>Figure 23: Enable 2FA Mail</strong>
 </p>
 <p align="center">
-  <img width="1920" height="1080" alt="Status Enable" src="https://github.com/user-attachments/assets/96781563-fe4b-4bfc-be1e-904673139fb5" />
-  <strong>Figure 24: Enable 2FA in Admin Profile</strong>
+  <img width="1920" height="956" alt="Status Enable" src="https://github.com/user-attachments/assets/ad263f54-5746-409f-9b4f-6006e35a45d1" />
+  <strong>Figure 24: Enable 2FA  in Admin Profile</strong>
 </p>
 <p>
-  <img width="1920" height="1080" alt="Disable 2FA" src="https://github.com/user-attachments/assets/39ef8162-f376-40cf-9a91-fe572d36f0d0" />
+  <img width="1920" height="966" alt="Disable 2FA" src="https://github.com/user-attachments/assets/d018242b-bf4b-4293-9b56-fb72ee711827" />
   <strong>Figure 25: Diable from Admin Profile</strong>
 </p>
 <p align="center">
