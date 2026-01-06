@@ -217,7 +217,7 @@ This project focuses on inventory tracking, low-stock monitoring, and basic invo
   <img width="1920" height="956" alt="Status Enable" src="https://github.com/user-attachments/assets/ad263f54-5746-409f-9b4f-6006e35a45d1" />
   <strong>Figure 24: Enable 2FA  in Admin Profile</strong>
 </p>
-<p>
+<p align="center">
   <img width="1920" height="966" alt="Disable 2FA" src="https://github.com/user-attachments/assets/d018242b-bf4b-4293-9b56-fb72ee711827" />
   <strong>Figure 25: Diable from Admin Profile</strong>
 </p>
