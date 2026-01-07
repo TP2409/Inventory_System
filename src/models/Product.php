@@ -61,10 +61,9 @@ class Product
          'description'=> $data ['description'],
          'image'=>$data['image'],
          'id'=>$id
-         ]);
-
-    
+         ]);    
     }
+    
     public function delete($id)
     {
         $stmt = $this->db->prepare("DELETE FROM products WHERE id = ?");

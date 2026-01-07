@@ -43,7 +43,7 @@
         }, "Please enter a valid quantity number.");
 
         $.validator.addMethod("validPrice", function(value, element) {
-            return this.optional(element) || /^[0-9]{2,3}$/.test(value);
+            return this.optional(element) || /^[0-9]{2,5}$/.test(value);
         }, "Please enter a valid price number.");
 
         $("#addProduct").validate({

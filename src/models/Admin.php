@@ -66,6 +66,31 @@ class Admin
 
     }
 
+    public function update($id, $data)
+    {
+        $sql = "UPDATE users SET name = :name, email = :email";
+
+        if (isset($data['password'])) {
+            $sql .= ", password = :password";
+        }
+
+        $sql .= " WHERE id = :id";
+
+        $stmt = $this->db->prepare($sql);
+
+        $params = [
+            ':name'  => $data['name'],
+            ':email' => $data['email'],
+            ':id'    => $id
+        ];
+
+        if (isset($data['password'])) {
+            $params[':password'] = $data['password'];
+        }
+
+        return $stmt->execute($params);
+    }
+
     public function find($id)
     {
         $stmt = $this->db->prepare("SELECT * FROM users WHERE id = :id");
@@ -80,7 +105,7 @@ class Admin
                 WHERE id = ?";
 
         $stmt = $this->db->prepare($sql);
-        return $stmt->execute([$secret, $adminId]);
+        return $stmt->execute([$secret, $adminId]);        
     }
 
     public function disable2fa($id)
@@ -91,5 +116,43 @@ class Admin
             WHERE id = :id
         ");
         return $stmt->execute([':id' => $id]);
+    }
+
+    public function reset2fa($adminId)
+    {
+        $stmt = $this->db->prepare("
+            UPDATE users 
+            SET google2fa_secret = NULL, google2fa_enabled = 0 
+            WHERE id = ?
+        ");
+        return $stmt->execute([$adminId]);
+    }
+
+    public function logSecurityAction($adminId, $action)
+    {
+        $stmt = $this->db->prepare("
+            INSERT INTO security_logs (admin_id, action, ip_address, user_agent)
+            VALUES (?, ?, ?, ?)
+        ");
+
+        return $stmt->execute([
+            $adminId,
+            $action,
+            $_SERVER['REMOTE_ADDR'] ?? 'UNKNOWN',
+            $_SERVER['HTTP_USER_AGENT'] ?? 'UNKNOWN'
+        ]);
+    }
+
+    public function insertGoogleUser($data)
+    {
+        $sql = "INSERT INTO users (name,email,google_id,login_provider)
+                VALUES (?,?,?,'google')";
+        $this->db->prepare($sql)->execute([
+            $data['name'],
+            $data['email'],
+            $data['google_id'],
+            $data['login_provider']
+        ]);
+        return $this->db->lastInsertId();
     }
 }

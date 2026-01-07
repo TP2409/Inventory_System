@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php include __DIR__ . "/../layouts/header.php"; ?>
+<?php include __DIR__ . "/../layouts/sidebar.php"; ?>
 <html>
 <head>
     <title>Invoice View</title>
@@ -42,3 +44,4 @@
 
 </body>
 </html>
+<?php include __DIR__ . "/../layouts/footer.php"; ?>

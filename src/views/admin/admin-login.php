@@ -1,3 +1,16 @@
+<?php
+use Google\Client as Google;
+
+$client = new Google();
+$client->setClientId(GOOGLE_CLIENT_ID);
+$client->setClientSecret(GOOGLE_CLIENT_SECRET);
+$client->setRedirectUri(GOOGLE_REDIRECT_URL);
+$client->addScope('email');
+$client->addScope('profile');
+
+$loginUrl = $client->createAuthUrl();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,10 +19,10 @@
 </head>
 <body>
 
-<div>
-    <h3 class="sign-in">Login</h3>
-
+<div class="">
+    <br>  
     <form id="loginForm" method="POST" action="index.php?action=admin-login-check">
+        <h3>Login</h3>
         <br>
 
         <label for="email">Email:</label>
@@ -18,10 +31,18 @@
         <label for="password">Password:</label>
         <input type="password" name="password" id="password" placeholder="Password">
 
-        <button type="submit" class="btn">Login</button>
-        <button type="button" class="btn" onclick="window.location.href='index.php?action=admin-register'">
-            Register
-        </button>
+        <div class="grp-btn">
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn" onclick="window.location.href='index.php?action=admin-register'">Register</button>
+        </div><br>
+        <div>
+            <a href="<?= htmlspecialchars($loginUrl) ?>" class="google-btn">
+            <img src="https://developers.google.com/identity/images/g-logo.png">
+             Login with Google
+            </a>
+        </div>
+       
+          
 
     </form>
 </div>

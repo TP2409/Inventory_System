@@ -3,3 +3,4 @@ upload/
 testmail.php
 composer.lock
 test.php
+config/google_config.local.php

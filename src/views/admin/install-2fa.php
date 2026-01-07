@@ -11,11 +11,11 @@
         <br>
     <p><strong> Step-1 : Install Google Authenticator </strong><br><br>
      Install Google Authenticator app on your mobile device from <br><br>
-        <button type="button" class="btn" onclick="window.open('https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en&gl=US', '_blank')">
+        <button type="button" class="install-btn" onclick="window.open('https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en&gl=US', '_blank')">
             Google Play Store
          </button> 
         or 
-        <button type="button" class="btn" onclick="window.open('https://apps.apple.com/us/app/google-authenticator/id388497605', '_blank')">
+        <button type="button" class="install-btn" onclick="window.open('https://apps.apple.com/us/app/google-authenticator/id388497605', '_blank')">
             Apple App Store
         </button>
     </p><br><br>

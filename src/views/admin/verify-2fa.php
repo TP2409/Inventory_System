@@ -16,13 +16,12 @@
 
         <br><br>
 
-        <button type="submit" class="btn">
-            Verify 
-        </button>
-
-        <a class="btn" href="index.php?action=cancel-setup-2fa">
-            Cancel or Lost your device
-        </a>
+        <div class="grp-btn">
+            <button type="submit" class="btn">Verify</button>
+            <a href="index.php?action=reset-2fa" class="btn" onclick="return confirm('Reset 2FA?')">
+            Reset or Lost your device
+            </a>
+       </div>
     </form>
 </div>
 </body>

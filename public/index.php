@@ -1,6 +1,7 @@
 <?php
 session_start();
 require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../config/google_config.php';
 
 use App\Controllers\ProductsController;
 use App\Controllers\AdminController;
@@ -12,6 +13,14 @@ switch ($action) {
 
     case "admin-login":
         (new AdminController())->index();
+        break;
+
+    case"google-login":
+        (new AdminController())->googleLogin();
+        break;
+
+    case"google-callback":
+        (new AdminController())->googleCallback();
         break;
 
     case "admin-register":
@@ -26,6 +35,14 @@ switch ($action) {
         (new AdminController())->profile();
         break;
 
+    case "admin-profile-edit":
+        (new AdminController())->editProfile();
+        break;
+
+    case "admin-profile-update":
+        (new AdminController())->updateProfile();
+        break;  
+        
     case "admin-login-check":
         (new AdminController())->loginCheck();
         break;
@@ -51,7 +68,11 @@ switch ($action) {
     case "disable-2fa":
         (new AdminController())->disable2fa();
         break;  
-    
+
+    case "reset-2fa":
+        (new AdminController())->reset2fa();
+        break;
+
     case 'verify-2fa':
         (new AdminController())->showVerify2fa();
         break;

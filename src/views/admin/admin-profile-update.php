@@ -1,33 +1,29 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Registration</title>
-    <link rel="stylesheet"  href="./css/registration.css">
+    <title>Update Admin Profile</title>
+    <link rel="stylesheet" href="./css/registration.css">
 </head>
 <body>
-<div class="">
-    <br>
-    <form id="registerForm" method="POST" action="index.php?action=admin-store">
-        <h3>Register</h3>
-        <br>
+    <div class="">
+        <h2>Update Admin Profile</h2>
+        <form id="updateProfileForm" method="POST" action="index.php?action=admin-profile-update" enctype="multipart/form-data">
+            <input type="hidden" name="admin_id" value="<?= $_SESSION['admin_id'] ?>">
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Name" required><br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="<?= $admin['name'] ?>" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Email" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="<?= $admin['email'] ?>"  required>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Password" required><br>
+            <label>New Password:</label>
+            <input type="password" id="password" name="password"  required>
 
-        <div class="grp-btn">
-            <button type="submit" class="btn">Submit</button>
-            <button type="button" class="btn" onclick="window.location.href='index.php?action=admin-login'">Cancel</button>
-        </div>
-
-    </form>
-</div>
-
+            <div class="grp-btn">
+                <button type="submit" class="btn">Update</button>
+                <button type="button" class="btn" onclick="window.location.href='index.php?action=admin-profile'">Cancel</button>
+            </div>
+        </form>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
     <script>
@@ -43,7 +39,7 @@
             return this.optional(element) || /^[A-Za-z\s]+$/.test(value);
         }, "Only letters and spaces allowed.");
 
-        $("#registerForm").validate({
+        $("#updateProfileForm").validate({
             rules: {
                 name: {
                     required: true,
@@ -85,7 +81,5 @@
 
     });
     </script>
-
-
 </body>
 </html>

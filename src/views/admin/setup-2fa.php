@@ -9,6 +9,11 @@
     <h3 class="sign-in-2fa">Scan QR Code</h3>
     <form >
         <br>
+        <?php if (isset($_GET['msg']) && $_GET['msg'] === '2fa-reset'): ?>
+            <div class="alert alert-warning">  
+                Please set up Two-Factor Authentication again using a new QR code.
+            </div>
+        <?php endif; ?>
   
         <p><strong> Step-2 : Set up your account </strong><br><br>
         Open the app and scan the QR code on the screen to add your account.</p><br><br>
