@@ -178,7 +178,7 @@ This project focuses on inventory tracking, low-stock monitoring, and basic invo
 <strong>Figure 15: Restock Mail when quantity is zero. </strong>
 </p>
 
-### **Login and Registration **
+### **Login and Registration**
 <p align="center">
   <img width="1920" height="398" alt="Login" src="https://github.com/user-attachments/assets/50d0d311-0ccc-4e5c-9e32-d797294ecb1c" />
 <strong>Figure 16: Login </strong>
