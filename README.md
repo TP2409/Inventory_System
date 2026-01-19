@@ -191,31 +191,43 @@ This project focuses on inventory tracking, low-stock monitoring, and basic invo
 <img width="1920" height="643" alt="Registration Mail" src="https://github.com/user-attachments/assets/5c7336d3-e5b6-498c-81d3-67a0c80625d2" />
 <strong>Figure 18: Registration Successful mail with username and password </strong> 
 </p>
+<p align="center">
+<img width="1920" height="455" alt="Login with Phone Number" src="https://github.com/user-attachments/assets/ca457286-6caa-486f-88de-0f795ede47ca" />
+<strong>Figure 19: Login with Phone Number </strong> 
+</p>
+<p align="center">
+<img width="1920" height="238" alt="Otp Send" src="https://github.com/user-attachments/assets/0ac06521-8faf-4804-834d-d2c27dd26874" />
+<strong>Figure 20: Enter mobile number and sms otp will arrive on your phone </strong> 
+</p>
+<p align="center">
+<img width="1920" height="363" alt="Verify Otp" src="https://github.com/user-attachments/assets/6601a997-ee37-429d-aa90-dff9460f7e39" />
+<strong>Figure 21: Verify otp </strong> 
+</p>
 
 ### **Admin Profile**
 <p align="center">
   <img width="1920" height="954" alt="Admin Profile" src="https://github.com/user-attachments/assets/1b44ef68-3fc4-43cb-8711-b297e3b070ce" />
-  <strong>Figure 19: Admin Profile </strong>
+  <strong>Figure 22: Admin Profile </strong>
 </p>
 <p align="center">
   <img width="1920" height="398" alt="Install Authenticator" src="https://github.com/user-attachments/assets/797d1dd6-d19f-46e5-92f9-8e1a997d3adc" />
-  <strong>Figure 20: Install 2FA </strong>
+  <strong>Figure 23: Install 2FA </strong>
 </p>
 <p align="center">
   <img width="1920" height="578" alt="Scan QR" src="https://github.com/user-attachments/assets/88c66d36-b5b6-4f86-af91-c211c7bb381e" />
-  <strong>Figure 21: Scan QR Code</strong>
+  <strong>Figure 24: Scan QR Code</strong>
 </p>
 <p align="center">
   <img width="1920" height="386" alt="Verify and Enable" src="https://github.com/user-attachments/assets/dc5f53d0-72cb-482e-87f0-2c1a319c1f8d" />
-  <strong>Figure 22: Verify and Enable 2FA</strong>
+  <strong>Figure 25: Verify and Enable 2FA</strong>
 </p>
 <p align="center">
   <img width="1920" height="944" alt="2FA Enable Mail" src="https://github.com/user-attachments/assets/3364926a-64b0-4e27-9225-9b2cb8895374" />
-  <strong>Figure 23: Enable 2FA Mail</strong>
+  <strong>Figure 26: Enable 2FA Mail</strong>
 </p>
 <p align="center">
   <img width="1920" height="956" alt="Status Enable" src="https://github.com/user-attachments/assets/ad263f54-5746-409f-9b4f-6006e35a45d1" />
-  <strong>Figure 24: Enable 2FA  in Admin Profile</strong>
+  <strong>Figure 27: Enable 2FA  in Admin Profile</strong>
 </p>
 <p align="center">
   <img width="1920" height="966" alt="Disable 2FA" src="https://github.com/user-attachments/assets/d018242b-bf4b-4293-9b56-fb72ee711827" />
@@ -223,9 +235,11 @@ This project focuses on inventory tracking, low-stock monitoring, and basic invo
 </p>
 <p align="center">
   <img width="1920" height="371" alt="Login after Enable 2FA" src="https://github.com/user-attachments/assets/ab628fc7-8a43-466b-b137-965295f8e846" />
-  <strong>Figure 26: After 2FA Enable Login</strong>
+  <strong>Figure 28: After 2FA Enable Login</strong>
 </p>
 <p align="center">
   <img width="1920" height="617" alt="Reset QR" src="https://github.com/user-attachments/assets/1a741822-08fd-4b0b-b1bc-5102f8a8f64b" />
-  <strong>Figure 27: Reset QR Scan for lost or reset</strong>
+  <strong>Figure 29: Reset QR Scan for lost or reset</strong>
 </p>
+
+
