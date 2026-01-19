@@ -17,6 +17,7 @@
         "bacon/bacon-qr-code": "^3.0",
         "pragmarx/google2fa": "^8.0",
         "robthree/twofactorauth": "1.8",
-        "google/apiclient": "^2.18"
+        "google/apiclient": "^2.18",
+        "twilio/sdk": "7.0"
     }
 }

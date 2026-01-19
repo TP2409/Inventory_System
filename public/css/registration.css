@@ -53,6 +53,9 @@ h1,h2,h3 {
 .btn:hover{
     background: #6f47a3;
 }  
+.btns{
+    text-align:center;
+}
 .google-btn {
     display: inline-flex;
     align-items: center;
@@ -106,10 +109,6 @@ form button {
     color: white;
     border-radius: 8px;
     cursor: pointer;
-}
-
-form button:hover {
-    background: #6f47a3;
 }
         
 .login-container {

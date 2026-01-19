@@ -19,7 +19,7 @@ $loginUrl = $client->createAuthUrl();
 </head>
 <body>
 
-<div class="">
+<div>
     <br>  
     <form id="loginForm" method="POST" action="index.php?action=admin-login-check">
         <h3>Login</h3>
@@ -35,15 +35,13 @@ $loginUrl = $client->createAuthUrl();
             <button type="submit" class="btn">Login</button>
             <button type="button" class="btn" onclick="window.location.href='index.php?action=admin-register'">Register</button>
         </div><br>
-        <div>
+        <div class="btns">
             <a href="<?= htmlspecialchars($loginUrl) ?>" class="google-btn">
             <img src="https://developers.google.com/identity/images/g-logo.png">
              Login with Google
-            </a>
+            </a><br><br>
+            <button type="button" onclick="window.location.href='index.php?action=mobile-login'" class="google-btn" >Login with Mobile Number</button>
         </div>
-       
-          
-
     </form>
 </div>
 

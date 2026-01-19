@@ -2,10 +2,12 @@
 session_start();
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../config/google_config.php';
+require __DIR__ . '/../config/Twilio_config.local.php';
 
 use App\Controllers\ProductsController;
 use App\Controllers\AdminController;
 use App\Controllers\InvoiceController;
+use App\Controllers\AuthController;
 
 $action = $_GET['action'] ?? 'admin-login';
 
@@ -13,14 +15,6 @@ switch ($action) {
 
     case "admin-login":
         (new AdminController())->index();
-        break;
-
-    case"google-login":
-        (new AdminController())->googleLogin();
-        break;
-
-    case"google-callback":
-        (new AdminController())->googleCallback();
         break;
 
     case "admin-register":
@@ -47,42 +41,60 @@ switch ($action) {
         (new AdminController())->loginCheck();
         break;
 
-    case "admin-logout":
-        (new AdminController())->logout();
+    case "mobile-login":    
+        (new AuthController())->mobileLogin();
         break;
 
-    case 'install-2fa':
-        (new AdminController())->install2fa();
+    case "send-mobile-otp": 
+        (new AuthController())->sendMobileOtp();
+        break;
+        
+    case "verify-mobile-otp":
+        $_SERVER['REQUEST_METHOD'] === 'POST' 
+        ? (new AuthController())->verifyMobileOtp()
+        : (new AuthController())->verifyMobileOtpPage();
+        break;    
+
+    case "admin-logout":
+        (new AdminController())->logout();
+        break;   
+
+    case"google-callback":
+        (new AuthController())->googleCallback();
+        break;    
+
+    case "install-2fa":
+        (new AuthController())->install2fa();
         break;
     
-    case 'setup-2fa':
-        (new AdminController())->setup2fa();
+    case "setup-2fa":
+        (new AuthController())->setup2fa();
         break;
 
     case "confirm-2fa":
         $_SERVER['REQUEST_METHOD'] === 'POST' 
-        ? (new AdminController())->confirm2fa()
-        : (new AdminController())->showConfirm2fa();
+        ? (new AuthController())->confirm2fa()
+        : (new AuthController())->showConfirm2fa();
         break;
 
     case "disable-2fa":
-        (new AdminController())->disable2fa();
+        (new AuthController())->disable2fa();
         break;  
 
     case "reset-2fa":
-        (new AdminController())->reset2fa();
+        (new AuthController())->reset2fa();
         break;
 
-    case 'verify-2fa':
-        (new AdminController())->showVerify2fa();
+    case "verify-2fa":
+        (new AuthController())->showVerify2fa();
         break;
 
-    case 'verify-2fa-check':
-         (new AdminController())->verify2fa();
+    case "verify-2fa-check":
+         (new AuthController())->verify2fa();
         break;
 
     case "cancel-setup-2fa":
-        (new AdminController())->cancelSetup2fa();
+        (new AuthController())->cancelSetup2fa();
         break;
 
     case "products-list":
@@ -117,7 +129,7 @@ switch ($action) {
         (new ProductsController())->updateStock();
         break;  
 
-    case  "low-stock-list": 
+    case "low-stock-list": 
         (new ProductsController())->lowStockList();
         break;
 
