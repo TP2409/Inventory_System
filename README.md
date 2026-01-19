@@ -29,7 +29,8 @@ This project focuses on inventory tracking, low-stock monitoring, and basic invo
 - Backend: PHP  
 - Database: MySQL  
 - Server: WAMP Server
-- 2FA Google Authentication 
+- 2FA Google Authentication
+- Login: Login with Google Email and Login with Phone Number
 - Architecture: MVC (Model–View–Controller)
 
 
@@ -44,6 +45,7 @@ This project focuses on inventory tracking, low-stock monitoring, and basic invo
   - 'Product.php'
   - 'Invoice.php'
   - 'Admin.php'
+  - 'Auth.php'
 
 ### **View**
 - Responsible for UI and presentation
@@ -60,6 +62,7 @@ This project focuses on inventory tracking, low-stock monitoring, and basic invo
   - 'ProductsController.php'
   - 'InvoiceController.php'
   - 'AdminController.php'
+  - 'AuthController.php'
 
 
 ---
@@ -102,6 +105,9 @@ This project focuses on inventory tracking, low-stock monitoring, and basic invo
 - Low stock products count
 - Total invoices count
 
+### **Login Authentication**
+- Login with Google Email
+- Login with Phone Number via SMS OTP
 
 ---
 
